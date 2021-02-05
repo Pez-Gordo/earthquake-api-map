@@ -1,7 +1,7 @@
 <?php
 
     $executionStartTime = microtime(true) / 1000;
-    $url='https://earthquake.usgs.gov/fdsnws/event/1/'. $_REQUEST['earthquakeData'];
+    $url='https://earthquake.usgs.gov/fdsnws/event/1/application.json'. $_REQUEST['earthquakeData'];
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

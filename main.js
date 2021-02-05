@@ -8,11 +8,15 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=ypfODnzHu
 }).addTo(map)
 
 $.ajax({
-	url: "getEarthquakeData.php",
-	type: 'POST',
+	url: "./getEarthquakeData.php",
+	type: 'GET',
 	dataType: "json",
 	
 	success: function(result) {
         console.log('populate options' , result);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
     }
+
 });
