@@ -1,7 +1,7 @@
 <?php
 
     $executionStartTime = microtime(true) / 1000;
-    $result = file_get_contents('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson');
+    $result = file_get_contents('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson');
 
 	$earthquakeData = json_decode($result, true);	
 
