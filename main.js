@@ -22,9 +22,11 @@ $.ajax({
             
             L.circle([quakePos[1], quakePos[0]], {
                 color: 'red',
-                fillColor: '#f03',
-                fillOpacity: 0.5,
-                radius: mag 
+                fillColor: 'white',
+                fillOpacity: 0.8,
+                radius: mag,
+                stroke: true,
+                weight: 5, 
             }).addTo(map).bindPopup('Magnitude -> ' + result.earthquakeData.features[i].properties.mag + ' points.<br>' +
                                     'Place -> ' + result.earthquakeData.features[i].properties.place + '<br>' +
                                     'Type -> ' + result.earthquakeData.features[i].properties.type + '<br>' +
